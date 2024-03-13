@@ -263,7 +263,7 @@
         var url = e.data.url;
 
         //console.log("Event received - Origin: " + e.origin + ", data: " + JSON.stringify(e.data));
-        if (e.origin !== 'https://amh.demo.amelia.com')
+        if (e.origin !== 'https://torrid.demo.amelia.com')
             return;
         console.log("Event received - Correct Origin: " + e.origin + ", data: " + JSON.stringify(e.data));
         if (e.data.action.includes("nav")) {
@@ -291,7 +291,7 @@
         var originalPageUrl = document.getElementById('originalFrame');
         console.log('sendMessage - originalPageUrl: ' + JSON.stringify(originalPageUrl));
         var receiverElem = document.getElementById('receiver').contentWindow;
-        receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://amh.demo.amelia.com/Amelia/ui/amh/chat");
+        receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://torrid.demo.amelia.com/Amelia/ui/torrid/chat");
     }
 
     window.addEventListener('message', receiveMessage);
